@@ -598,8 +598,8 @@
   ($AJB.general.Game = function () {
     "use strict";
     function a() {
-      var a = document.body.scrollWidth || document.documentElement.scrollWidth,
-        b = document.body.scrollHeight || document.documentElement.scrollHeight;
+      var a = 1000, // Fixed width
+          b = 600;  // Fixed height
       (r.width = a), (r.height = b), (i = l(x, a, b)), (s.style.backgroundColor = i.color), (s.style.width = a + "px"), (s.style.height = b + "px"), (j = b / 560);
     }
     function b() {}
@@ -679,7 +679,7 @@
       F = 0,
       G = { start: g, shareTitle: A, shareLevel: D };
     return G;
-  }),
+}),
   function share() {
     console.log("share");
   };

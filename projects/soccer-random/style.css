@@ -41,6 +41,10 @@ html, body, canvas {
 
 canvas {
     order: 1; /* Canvas ko pehle aane dein */
+    width: 1000px !important;
+    height: 600px !important;
+    position: relative;
+    left: 17%;
 }
 
 section {

@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+#gameContainer{
+    background: black !important;
+}
 canvas{
     width: 1000px !important;
     height: 600px !important;

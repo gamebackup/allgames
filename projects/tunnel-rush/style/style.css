@@ -3,6 +3,12 @@
     margin: 0;
     padding: 0;
 }
+canvas{
+    width: 1000px !important;
+    height: 600px !important;
+    position: relative;
+    left: 17%;
+}
 
 .webgl-content .logo,
 .progress {

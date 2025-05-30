@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow: unset !important;">
 
 <style type="text/css">
   h1 {
@@ -9,14 +9,15 @@
   }
   p {
 	  font-family: Arial, Helvetica, sans-serif;
-	  color: #000;
+	   color: #ffffff;
 	  font-size: small;
   }
-  body {
-	  background-color: #FFF;
+  body , html {
+	  background-color: #000000 !important;
       text-align: center;
       margin: 0;
       padding: 0;
+      overflow: unset !important;
   }
   #bloctxt {
 	  border-left-width: 5px;
@@ -28,6 +29,38 @@
 	  width: 600px;
 	  margin-left: -260px
   }
+	   .last-section {
+  width: 100%;
+  max-width: 1140px; /* Matches Bootstrap's container max-width for large screens */
+  margin-right: auto; 
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding: 2rem;
+  
+} 
+/*  shadow code is start from here */
+.container.last-section {
+  background-color: #f2f2f21a;
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.397); /* soft white shadow for dark bg */
+  max-width: 1000px;
+  margin: 0px auto;
+  line-height: 1.7;
+  font-family: Arial, sans-serif;
+}
+.container.last-section h2 {
+  color: #e0e0e0;
+}
+.container.last-section a {
+  color: #ff4c4c;
+  text-decoration: none;
+}
+.container.last-section a:hover {
+  text-decoration: underline;
+}
 </style>
 <head>
 <!-- Google tag (gtag.js) -->
@@ -201,7 +234,27 @@
 </head>
 
 <body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
 
+        function updateClock() {
+          const now = new Date();
+          const timeString = now.toLocaleTimeString();
+          const clock = document.getElementById('clock');
+          if (clock) {
+            clock.textContent = timeString;
+          }
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+      });
+  </script>
 <div style="display: inline-block; -webkit-user-select: none; text-align: left;">
     <canvas id="MMFCanvas" width="1920" height="1080">
     	Your browser does not support Canvas.
@@ -221,6 +274,49 @@
     }
     // RUNTIMESTARTEND
 </script>
+  <section style="background-color: #1c1c1d; padding: 70px 0px; ">
+      <div class="container last-section">
+        <h2>Wanna Play Your Favorite Games Without Any Distraction?</h2>
+        <p><a href="https://only-games.github.io/" style="color: #a83234;">Only Games</a> is the perfect spot. This platform is designed to give you seamless, ad-free gaming experiences that don’t require any downloads. No matter if you’re on a school network, a Chromebook, or even at work, Only Games makes sure you can enjoy the best Unblocked Games hassle-free. You can get instant access to fun with Unblocked Games 6x, no matter where you are!</p>
+    
+        <h2>Why Play on Only-Games?</h2>
+        <p>✅ <b>No Downloads Required</b>– Just click and play instantly in your browser.</p>
+        <p>🎮 <b>Handpicked Titles</b>– We feature only games that are tested, safe, and fun.</p>
+        <p>🌐 <b>Accessible Anywhere</b>–  Play from your phone, tablet, or PC.</p>
+        <p>🔄 <b>New Games Weekly </b>–  We keep things fresh with regular updates.</p>
+        <h2>Top 5 Unblocked Games on Only Games</h2>
+       <p><strong><a href="https://only-games.github.io/projects/1v1.lol/index.html" style="color: #a83234;">1v1 Lol</a></strong>: Play 1v1.lol unblocked the online building simulator & third person shooting game at Only Games. 1v1.lol is a competitive online third-person shooter that challenges players to strategically build structures while navigating the map.</p>
+              <p><strong><a href="https://only-games.github.io/projects/2048/index.html" style="color: #a83234;">2048</a></strong>: Play 2048 online join the tiles and reach 2048 number. Even if you don't love numbers you will love this classic game. </p>
+          <p><strong><a href="https://only-games.github.io/projects/ducklife4/index.html" style="color: #a83234;">Duck Life 4</a></strong>: Duck Life 4 is one of the latest and most entertaining entries in the series. Train your duck, feed it, and collect accessories to help it reach its full potential.</p>
+         <p><strong><a href="https://only-games.github.io/projects/flappy-bird/index.html" style="color: #a83234;">Flappy Bird</a></strong>: The game is a side-scrolling adventure where the player guides a bird named Faby, navigating through gaps between green pipes while avoiding collisions.</p>
+         <p><strong><a href="https://only-games.github.io/projects/core-ball/index.html" style="color: #a83234;">Core Ball</a></strong>:  Coreball Game – The objective is simple: throw your ball at the core without hitting any of the other balls already attached to it.</p>
+    
+      </div>
+    </section>
+    
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const footerContainer = document.getElementById('footer-container');
 
+      fetch('footer.html')
+        .then(response => {
+          if (!response.ok) throw new Error('Network response was not ok');
+          return response.text();
+        })
+        .then(data => {
+          footerContainer.innerHTML = data;
+        })
+        .catch(error => {
+          console.error('Error loading footer:', error);
+          footerContainer.innerHTML = `
+            <footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+              <p>© ${new Date().getFullYear()} onlygames. All rights reserved.</p>
+            </footer>
+          `;
+        });
+    });
+  </script>
 </body>
 </html>

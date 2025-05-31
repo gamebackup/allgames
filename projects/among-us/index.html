@@ -82,52 +82,7 @@
     }
   }, 30000);
 </script>
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
-<script>
-  window.googletag = window.googletag || { cmd: [] };
-  var LeftSideRailSlot, RightSideRailSlot;
-
-  googletag.cmd.push(function () {
-    // Define Left Side Rail Slot
-    LeftSideRailSlot = googletag.defineOutOfPageSlot(
-      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
-      googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
-    );
-
-    if (LeftSideRailSlot) {
-      LeftSideRailSlot.addService(googletag.pubads());
-    }
-
-    // Define Right Side Rail Slot
-    RightSideRailSlot = googletag.defineOutOfPageSlot(
-      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
-      googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
-    );
-
-    if (RightSideRailSlot) {
-      RightSideRailSlot.addService(googletag.pubads());
-    }
-
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-
-    // Display both side rail slots
-    if (LeftSideRailSlot) googletag.display(LeftSideRailSlot);
-    if (RightSideRailSlot) googletag.display(RightSideRailSlot);
-  });
-
-  // Refresh both side rail ads every 30 seconds
-  setInterval(function () {
-    const slotsToRefresh = [];
-    if (LeftSideRailSlot) slotsToRefresh.push(LeftSideRailSlot);
-    if (RightSideRailSlot) slotsToRefresh.push(RightSideRailSlot);
-
-    if (slotsToRefresh.length > 0) {
-      googletag.pubads().refresh(slotsToRefresh);
-    }
-  }, 30000);
-</script>
 <link rel="dns-prefetch" href="https://universal.wgplayer.com" />
 
 <script type="text/javascript" async>
@@ -142,6 +97,8 @@
     m.parentNode.insertBefore(a, m);
   }(document, "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname + "&wp=" + window.location.pathname + "&ws=" + window.location.search);
 </script>
+	    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9056557178473804"
+     crossorigin="anonymous"></script>
 
     </head>
     <script src="/js/main.js"></script>

@@ -69,92 +69,9 @@
     googletag.display(interstitialSlot);
   });
 </script>
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 
-<script>
-  // Initialize googletag object
-  window.googletag = window.googletag || { cmd: [] };
-
-  // Declare ad slot variables
-  var LeftSideRailSlot, RightSideRailSlot;
-
-  googletag.cmd.push(() => {
-    // Define Left Side Rail slot
-    LeftSideRailSlot = googletag.defineOutOfPageSlot(
-      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
-      googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
-    );
-    if (LeftSideRailSlot) {
-      LeftSideRailSlot.addService(googletag.pubads());
-    }
-
-    // Define Right Side Rail slot
-    RightSideRailSlot = googletag.defineOutOfPageSlot(
-      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
-      googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
-    );
-    if (RightSideRailSlot) {
-      RightSideRailSlot.addService(googletag.pubads());
-    }
-
-    // Enable single request and activate services
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-
-    // Display the side rail ads
-    googletag.display(LeftSideRailSlot);
-    googletag.display(RightSideRailSlot);
-  });
-
-  // Refresh the ads every 30 seconds
-  setInterval(function() {
-    googletag.pubads().refresh([LeftSideRailSlot, RightSideRailSlot]);
-  }, 30000);
-</script>
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-<script>
-  window.googletag = window.googletag || { cmd: [] };
-  var LeftSideRailSlot, RightSideRailSlot;
-
-  googletag.cmd.push(function () {
-    // Define the left side rail ad slot
-    LeftSideRailSlot = googletag.defineOutOfPageSlot(
-      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
-      googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
-    );
-    if (LeftSideRailSlot) {
-      LeftSideRailSlot.addService(googletag.pubads());
-      googletag.display(LeftSideRailSlot);
-    }
-
-    // Define the right side rail ad slot
-    RightSideRailSlot = googletag.defineOutOfPageSlot(
-      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
-      googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
-    );
-    if (RightSideRailSlot) {
-      RightSideRailSlot.addService(googletag.pubads());
-      googletag.display(RightSideRailSlot);
-    }
-
-    // Enable single request mode and initialize services
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-
-  // Refresh both side rail slots every 30 seconds
-  setInterval(function () {
-    var slotsToRefresh = [];
-    if (LeftSideRailSlot) slotsToRefresh.push(LeftSideRailSlot);
-    if (RightSideRailSlot) slotsToRefresh.push(RightSideRailSlot);
-    if (slotsToRefresh.length) {
-      googletag.pubads().refresh(slotsToRefresh);
-    }
-  }, 30000);
-</script>
-
-<meta name="ahrefs-site-verification" content="4b2fdd07b566d949797aacb388fc4cf10e2a6ed2bb15eca4388030e3c048969e">
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9056557178473804"
+     crossorigin="anonymous"></script>
   </head>
   <body onload="startTime()">
   

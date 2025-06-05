@@ -74,6 +74,46 @@
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9056557178473804"
      crossorigin="anonymous"></script>
+	  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+<script>
+  window.googletag = window.googletag || { cmd: [] };
+
+  var LeftSideRailSlot, RightSideRailSlot;
+
+  googletag.cmd.push(() => {
+    // Define left side rail ad slot
+    LeftSideRailSlot = googletag.defineOutOfPageSlot(
+      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
+      googletag.enums.OutOfPageFormat.LEFT_SIDE_RAIL
+    );
+    if (LeftSideRailSlot) {
+      LeftSideRailSlot.addService(googletag.pubads());
+    }
+
+    // Define right side rail ad slot
+    RightSideRailSlot = googletag.defineOutOfPageSlot(
+      '/21849154601,23300816471/Ad.Plus-Side-Anchor',
+      googletag.enums.OutOfPageFormat.RIGHT_SIDE_RAIL
+    );
+    if (RightSideRailSlot) {
+      RightSideRailSlot.addService(googletag.pubads());
+    }
+
+    // Enable single request mode
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+
+    // Display the slots
+    if (LeftSideRailSlot) googletag.display(LeftSideRailSlot);
+    if (RightSideRailSlot) googletag.display(RightSideRailSlot);
+  });
+
+  // Refresh the side rail slots every 30 seconds
+  setInterval(function () {
+    googletag.pubads().refresh([LeftSideRailSlot, RightSideRailSlot]);
+  }, 30000);
+</script>
   </head>
   <body onload="startTime()">
   
@@ -94,17 +134,22 @@
         });
     </script>
 	  <div class="banner-ad-content" style="padding: 20px; text-align: center;">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9056557178473804"
-     crossorigin="anonymous"></script>
-<!-- banner ad 1 -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:750px;height:300px"
-     data-ad-client="ca-pub-9056557178473804"
-     data-ad-slot="6224623804"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-		  </div>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+<!-- Ad container -->
+<div id="970x250-1" style="width:970px; height:250px;">
+  <script>
+    window.googletag = window.googletag || { cmd: [] };
+
+    googletag.cmd.push(function () {
+      googletag.defineSlot('/21849154601,23300816471/Ad.Plus-970x250', [970, 250], '970x250-1')
+        .addService(googletag.pubads());
+
+      googletag.enableServices();
+      googletag.display('970x250-1');
+    });
+  </script>
+</div>
          
   <div class="unblocked-text">
     <h1 class="text-center">All Unblocked Games</h1>
@@ -267,18 +312,18 @@
 
 
 
-<div id="250x250-1">
+<div id="250x250-2">
   <script>
     window.googletag = window.googletag || { cmd: [] };
     googletag.cmd.push(function() {
       googletag.defineSlot(
         '/21849154601,23300816471/Ad.Plus-250x250',
         [250, 250],
-        '250x250-1'
+        '250x250-2'
       ).addService(googletag.pubads());
 
       googletag.enableServices();
-      googletag.display('250x250-1');
+      googletag.display('250x250-2');
     });
   </script>
 </div> 
@@ -424,18 +469,18 @@
 
 
 
-<div id="250x250-2">
+<div id="250x250-3">
   <script>
     window.googletag = window.googletag || { cmd: [] };
     googletag.cmd.push(function() {
       googletag.defineSlot(
         '/21849154601,23300816471/Ad.Plus-250x250',
         [250, 250],
-        '250x250-2'
+        '250x250-3'
       ).addService(googletag.pubads());
 
       googletag.enableServices();
-      googletag.display('250x250-2');
+      googletag.display('250x250-3');
     });
   </script>
 </div>  

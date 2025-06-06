@@ -15,7 +15,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
- <title>Moto X3M Winter - Play Unblocked game at Only Game</title>
+ <title>Moto X3M Winter</title>
 <meta name="description" content="Race through icy tracks and perform epic stunts in Moto X3M Winter. Enjoy this thrilling bike game online—fast loading and free to play!">
 <meta name="keywords" content="Moto X3M Winter, bike stunt game, unblocked games, winter racing game, Moto X3M series, GitHub.io games, Unblocked games, GitHub games">
 <link rel="canonical" href="https://only-games.github.io/projects/moto-x3m-winter/index.html">
@@ -49,7 +49,6 @@
    <!-- Navbar -->
     <div id="navbar-placeholder"></div>
     <script>
-      fetch('header.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('navbar-placeholder').innerHTML = data;
@@ -149,32 +148,8 @@
       </div>
     </section>
     <script>
-      // footer-loader.js
-      document.addEventListener('DOMContentLoaded', function() {
-          // Create a container for the footer
-          const footerContainer = document.createElement('div');
-          footerContainer.id = 'footer-container';
-          document.body.appendChild(footerContainer);
-          
-          // Load the footer content
-          fetch('footer.html')
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error('Network response was not ok');
-              }
-              return response.text();
-          })
-          .then(data => {
-              footerContainer.innerHTML = data;
-          })
-              .catch(error => {
-                  console.error('Error loading footer:', error);
-                  // Fallback content if footer fails to load
-                  footerContainer.innerHTML = `
-                      <footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
-                          <p>© ${new Date().getFullYear()} onlygames. All rights reserved.</p>
-      
-                      </footer>
+   
+
                   `;
               });
       });
